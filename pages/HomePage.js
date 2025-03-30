@@ -4,10 +4,15 @@ exports.HomePage = class HomePage {
         this.loginBtn = page.getByTestId('goto-signin');
         this.shoppingCart = page.getByAltText('Cart');
         this.allBooks = page.getByText('All Books');
-        this.searchField = page.getByTestId('search-input');
+        this.searchField = page.getByRole('textbox', { name: 'Enter keywords...' });
         this.searchBtn = page.getByTestId('search-btn');
         this.sortNew = page.getByRole('link', { name: 'New' });
-
+        this.sortDesc = page.getByRole('link', { name: 'Sort By DESC' });
+        this.sortAsc = page.getByRole('link', { name: 'Sort By ASC' });
+        this.sortPrice = page.getByText('Price');
+        this.addToCartJS = page.getByAltText('JavaScript for Web Developers');
+        this.addToCartAgile = page.getByAltText('Agile Testing');
+        this.addToCartDevops = page.getByAltText('The DevOps Handbook');
     }
 
     async clickLoginBtn() {
@@ -31,5 +36,23 @@ exports.HomePage = class HomePage {
     }
     async sortByNew() {
         await this.sortNew.click();
+    }
+    async sortByAsc() {
+        await this.sortAsc.click();
+    }
+    async sorByDesc() {
+        await this.sortDesc.click();
+    }
+    async sorByPrice() {
+        await this.sortPrice.click();
+    }
+    async addToCartDevops() {
+        await this.addToCartDevops.click();
+    }
+    async addToCartJS() {
+        await this.addToCartJS.click();
+    }
+    async addToCartAgile() {
+        await this.addToCartAgile.click();
     }
 }
