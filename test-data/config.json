@@ -1,0 +1,12 @@
+{
+    "baseUrl": "https://practice.expandtesting.com/bookstore",
+    "urls": {
+      "registrationUrl": "/user/signup",
+      "loginUrl": "/user/signin"
+    },
+    "errorMessages": {
+      "invalidEmail": "Invalid email",
+      "passwordMismatch": "Password and Confirm Password must match",
+      "passwordTooShort": "Invalid password"
+    }
+  }
