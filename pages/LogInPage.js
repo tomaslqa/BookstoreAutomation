@@ -5,7 +5,7 @@ exports.LogInPage = class LogInPage {
         this.passwordField = page.getByRole('textbox', { name: 'Password' });
         this.signInBtn = page.getByRole('button', { name: 'Sign In' });
         this.signUpBtn = page.getByRole('link', { name: 'Sign Up!' });
-        this.profile = page.getByRole('link', { name: 'Profile' });
+        this.profile = page.getByTestId('navbarDropdown');
         this.logout = page.getByRole('link', { name: 'Log Out' });
     }
 
@@ -13,17 +13,19 @@ exports.LogInPage = class LogInPage {
         await this.signUpBtn.click();
     }
     async enterEmail(email) {
-        await this.emailField.sendKeys(email);
+        await this.emailField.click();
+        await this.emailField.fill(email);
     }
     async enterpassword(pwd) {
-        await this.searchField.sendKeys(pwd);
+        await this.passwordField.click();
+        await this.passwordField.fill(pwd);
     }
     async clickSignInBtn() {
         await this.signInBtn.click();
     }
     async loginWithCredentials(email, pwd) {
-        enterEmail(email);
-        enterpassword(pwd);
-        clickSignInBtn();
+        await this.enterEmail(email);
+        await this.enterpassword(pwd);
+        await this.clickSignInBtn();
     }
 }

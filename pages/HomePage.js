@@ -31,8 +31,8 @@ exports.HomePage = class HomePage {
         await this.searchBtn.click();
     }
     async searchForBook(text) {
-        enterTxtIntoSearch(text);
-        clickSearchBtn() 
+        await this.enterTxtIntoSearch(text);
+        await this.clickSearchBtn() 
     }
     async sortByNew() {
         await this.sortNew.click();
