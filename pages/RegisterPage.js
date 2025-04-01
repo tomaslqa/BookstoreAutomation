@@ -9,30 +9,30 @@ exports.RegisterPage = class RegisterPage {
         this.error = page.locator('#flash');
     }
 
-async enterUsername(username) {
-    await this.username.fill(username);
-}
-async enterRegistrationEmail(email) {
-    await this.email.click();
-    await this.email.fill(email);
-}
-async enterRegistrationPwd(pwd) {
-    await this.password.click();
-    await this.password.fill(pwd);
-}
-async confirmRegistrationPwd(confirmPwd) {
-    await this.confirmPwd.click();
-    await this.confirmPwd.fill(confirmPwd);
-}
-async clickSignUpBtn() {
-    
-    await this.registerBtn.click();
-}
-async completeRegistrationForm(username, email, pwd, confirmPwd) {
-    await this.enterUsername(username);
-    await this.enterRegistrationEmail(email);
-    await this.enterRegistrationPwd(pwd);
-    await this.confirmRegistrationPwd(confirmPwd);
-    await this.clickSignUpBtn();
-}
+    async enterUsername(username) {
+        await this.username.fill(username);
+    }
+    async enterRegistrationEmail(email) {
+        await this.email.click();
+        await this.email.fill(email);
+    }
+    async enterRegistrationPwd(pwd) {
+        await this.password.click();
+        await this.password.fill(pwd);
+    }
+    async confirmRegistrationPwd(confirmPwd) {
+        await this.confirmPwd.click();
+        await this.confirmPwd.fill(confirmPwd);
+    }
+    async clickSignUpBtn() {
+
+        await this.registerBtn.click();
+    }
+    async completeRegistrationForm(username, email, pwd, confirmPwd) {
+        await this.enterUsername(username);
+        await this.enterRegistrationEmail(email);
+        await this.enterRegistrationPwd(pwd);
+        await this.confirmRegistrationPwd(confirmPwd);
+        await this.clickSignUpBtn();
+    }
 }

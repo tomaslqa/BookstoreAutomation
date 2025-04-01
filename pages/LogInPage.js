@@ -6,6 +6,7 @@ exports.LogInPage = class LogInPage {
         this.signInBtn = page.getByRole('button', { name: 'Sign In' });
         this.signUpBtn = page.getByRole('link', { name: 'Sign Up!' });
         this.profile = page.getByTestId('navbarDropdown');
+        this.error = page.locator('#flash');
         this.logout = page.getByRole('link', { name: 'Log Out' });
     }
 

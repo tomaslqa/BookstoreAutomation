@@ -5,7 +5,7 @@ exports.HomePage = class HomePage {
         this.shoppingCart = page.getByAltText('Cart');
         this.allBooks = page.getByText('All Books');
         this.searchField = page.getByRole('textbox', { name: 'Enter keywords...' });
-        this.searchBtn = page.getByTestId('search-btn');
+        this.searchBtn = page.getByRole('button', { name: 'Search' });
         this.sortNew = page.getByRole('link', { name: 'New' });
         this.sortDesc = page.getByRole('link', { name: 'Sort By DESC' });
         this.sortAsc = page.getByRole('link', { name: 'Sort By ASC' });
@@ -13,6 +13,9 @@ exports.HomePage = class HomePage {
         this.addToCartJS = page.getByAltText('JavaScript for Web Developers');
         this.addToCartAgile = page.getByAltText('Agile Testing');
         this.addToCartDevops = page.getByAltText('The DevOps Handbook');
+        this.results = page.locator('#books');
+        this.resultsTitle = page.locator('h5');
+        this.noResultsError = page.locator('p');
     }
 
     async clickLoginBtn() {
@@ -25,22 +28,24 @@ exports.HomePage = class HomePage {
         await this.allBooks.click();
     }
     async enterTxtIntoSearch(text) {
-        await this.searchField.sendKeys(text);
+        await this.searchField.fill(text);
     }
     async clickSearchBtn() {
         await this.searchBtn.click();
     }
     async searchForBook(text) {
         await this.enterTxtIntoSearch(text);
-        await this.clickSearchBtn() 
+        await this.clickSearchBtn()
     }
     async sortByNew() {
         await this.sortNew.click();
     }
     async sortByAsc() {
+        await this.sortPrice.click()
         await this.sortAsc.click();
     }
     async sorByDesc() {
+        await this.sortPrice.click()
         await this.sortDesc.click();
     }
     async sorByPrice() {
