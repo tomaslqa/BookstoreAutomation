@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 
-test('TC05 Login with correct credentials', async ({ page }, testInfo) => {
+test('TC05 Verify user can log in with correct credentials', async ({ page }, testInfo) => {
 
     const login = new LogInPage(page);
     console.log(`TC05_Email: ${user.email}\nTC05_Password: ${user.password}`);
@@ -26,7 +26,7 @@ test('TC05 Login with correct credentials', async ({ page }, testInfo) => {
     });
 })
 
-test('TC06 Login with incorrect credentials', async ({ page }, testInfo) => {
+test('TC06 Verify user can not log in with incorrect credentials', async ({ page }, testInfo) => {
 
     const login = new LogInPage(page);
     console.log(`TC06_Email: ${user.email}\nTC06_Password: ${user.password + "z"}`);
@@ -43,7 +43,7 @@ test('TC06 Login with incorrect credentials', async ({ page }, testInfo) => {
         await expect(page).toHaveURL(config.baseUrl + config.urls.loginUrl);
     });
 })
-test('TC07 Login with empty password', async ({ page }, testInfo) => {
+test('TC07 Verify user can not log in with blank password', async ({ page }, testInfo) => {
 
     const login = new LogInPage(page);
     console.log(`TC07_Email: ${user.email}\nTC07_Password: ${""}`);
@@ -60,7 +60,7 @@ test('TC07 Login with empty password', async ({ page }, testInfo) => {
         await expect(page).toHaveURL(config.baseUrl + config.urls.loginUrl);
     });
 })
-test('TC08 Login with too short password', async ({ page }, testInfo) => {
+test('TC08 Verify user can not log in with too short password', async ({ page }, testInfo) => {
 
     const login = new LogInPage(page);
     const shortPassword = '1';

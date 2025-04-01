@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 
-test('TC09 Sort books ascending', async ({ page }, testInfo) => {
+test('TC09 Verify book listings can be sorted ascending', async ({ page }, testInfo) => {
 
   const home = new HomePage(page);
 
@@ -29,7 +29,7 @@ test('TC09 Sort books ascending', async ({ page }, testInfo) => {
 
   });
 })
-test('TC10 Search book by full title', async ({ page }, testInfo) => {
+test('TC10 Verify book can be searched by full title', async ({ page }, testInfo) => {
 
   const home = new HomePage(page);
 
@@ -46,7 +46,7 @@ test('TC10 Search book by full title', async ({ page }, testInfo) => {
   });
 })
 
-test('TC11 Search book by part of the title', async ({ page }, testInfo) => {
+test('TC11 Verify book can be searched by part of the title', async ({ page }, testInfo) => {
 
   const home = new HomePage(page);
 
@@ -62,7 +62,7 @@ test('TC11 Search book by part of the title', async ({ page }, testInfo) => {
     expect(title).toBe(book[0].title);
   });
 })
-test('TC12 Search book by nonexistent title', async ({ page }, testInfo) => {
+test('TC12 Verify searching book by nonexistent title returns no results', async ({ page }, testInfo) => {
 
   const home = new HomePage(page);
 
