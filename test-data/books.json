@@ -1,0 +1,30 @@
+[
+    {
+        "title": "JavaScript for Web Developers",
+        "price": "40 €",
+        "imageLink": "https://practice.expandtesting.com/img/bs_js_book.png",
+        "description": "The ultimate JavaScript Programming guide for Web Developers",
+        "link": "https://practice.expandtesting.com/bookstore/books/674108466cb6226060a20d44"
+    },
+    {
+        "title": "Agile Testing",
+        "price": "56 €",
+        "imageLink": "https://practice.expandtesting.com/img/bs_testing_book.png",
+        "description": "A Practical Guide for Testers and Agile Teams",
+        "link": "https://practice.expandtesting.com/bookstore/books/67410a586cb6226060a20d8d"
+    },
+    {
+        "title": "The DevOps Handbook",
+        "price": "30 €",
+        "imageLink": "https://practice.expandtesting.com/img/bs_devops_book.png",
+        "description": "How to Create World-Class Agility, Reliability, & Security in Technology Organizations",
+        "link": "https://practice.expandtesting.com/bookstore/books/67410b8c6cb6226060a20da4"
+    },
+    {
+        "title": "Phyton for begginers",
+        "price": "0 €",
+        "imageLink": "none",
+        "description": "Phyton",
+        "link": "none"
+    }
+]
