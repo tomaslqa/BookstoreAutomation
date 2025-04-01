@@ -2,11 +2,16 @@
     "baseUrl": "https://practice.expandtesting.com/bookstore",
     "urls": {
       "registrationUrl": "/user/signup",
-      "loginUrl": "/user/signin"
+      "loginUrl": "/user/signin",
+      "profile": "/user/profile"
     },
     "errorMessages": {
       "invalidEmail": "Invalid email",
       "passwordMismatch": "Password and Confirm Password must match",
-      "passwordTooShort": "Invalid password"
+      "passwordTooShort": "Invalid password",
+      "incorrectPassword": "Incorrect password",
+      "missingPassword": "Missing credentials",
+      "passwordTooShortLogin":"Invalid password, min length must be at least 5 characters",
+      "booksNoResults" : "Can not find any products"
     }
   }
